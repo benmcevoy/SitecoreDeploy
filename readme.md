@@ -1,5 +1,7 @@
 ﻿# SitecoreDeploy
 
+#### A utility to execute commands against a sitecore instance 
+
 This utility expects **Sitecore v9** or greater and **MicroCHAP v1.2.2** or greater.
 
 A utility to execute commands during deployment, such as Publish, Rebuild indexes and so on.
@@ -17,12 +19,12 @@ You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx
 
 ## Available commands
 
-When a request to execute a command is made and query string parameters are turned into a Dictionary<string,string> and passed into the commands Execute method.
-This allows you pass well known paramters from your PowerShell script to the command.
+When a request to execute a command is made the query string parameters are turned into a Dictionary<string,string> and passed into the commands Execute method.
+This allows you pass well known parameters from your PowerShell script to the command.
 
 For example, the Publish command understands ?arg=Smart|Full
 
-Whenever you include a query string argument you **must** also include it when creating a challenge and signature with microCHAP.  The PowerShell example above does this.
+Whenever you include a query string argument you **must** also include it when creating a challenge and signature with microCHAP.  The PowerShell example illustrates this.
 
 
 #### Publish 
