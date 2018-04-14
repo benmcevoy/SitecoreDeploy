@@ -4,7 +4,7 @@ This utility expects **Sitecore v9** or greater and **MicroCHAP v1.2.2** or grea
 
 A utility to execute commands during deployment, such as Publish, Rebuild indexes and so on.
 
-This utility is heavily inspired by Unicorn.  I have used microCHAP and ripped the authentication code out of Unicorn.
+This utility is inspired by Unicorn.  I have used microCHAP and ripped the authentication code out of Unicorn.
 
 It is intended that you use this utility via PowerShell commands during your deployment pipeline.
 
