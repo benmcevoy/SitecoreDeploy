@@ -8,12 +8,6 @@ This utility is inspired by Unicorn.  I have used microCHAP and ripped the authe
 
 It is intended that you use this utility via PowerShell commands during your deployment pipeline.
 
-## Using SitecoreDeploy commands
-
-After you have installed and built the project you can then call the commands via PowerShell, curl, PostMan or other tool.
-
-You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx?command=challenge 
-
 
 ## Available commands
 
@@ -23,7 +17,6 @@ This allows you pass well known parameters from your PowerShell script to the co
 For example, the Publish command understands ?arg=Smart|Full
 
 Whenever you include a query string argument you **must** also include it when creating a challenge and signature with microCHAP.  The PowerShell example illustrates this.
-
 
 #### Publish 
 
@@ -74,6 +67,11 @@ TBD
 
 e.g. /sitecoredeploy.aspx?command=deploymarketingdefinitions
 
+## Using SitecoreDeploy commands
+
+After you have installed and built the project you can then call the commands via PowerShell, curl, PostMan or other tool.
+
+You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx?command=challenge 
 
 #### Calling from PowerShell
 
