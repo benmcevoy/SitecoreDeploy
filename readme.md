@@ -14,6 +14,67 @@ After you have installed and built the project you can then call the commands vi
 
 You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx?command=challenge 
 
+
+## Available commands
+
+When a request to execute a command is made and query string parameters are turned into a Dictionary<string,string> and passed into the commands Execute method.
+This allows you pass well known paramters from your PowerShell script to the command.
+
+For example, the Publish command understands ?arg=Smart|Full
+
+Whenever you include a query string argument you **must** also include it when creating a challenge and signature with microCHAP.  The PowerShell example above does this.
+
+
+#### Publish 
+
+Publish the site.
+
+By default this will perform a smart publish.  Each language is published.
+
+|Parameter|Value|
+|:-------|:-------|
+|command|publish|
+|arg|smart, full or incremental|
+
+e.g. /sitecoredeploy.aspx?command=Publish&arg=full
+
+#### RebuildIndexes 
+
+Rebuild the sitecore search indexes.
+
+By default this rebuild all indexes.
+
+|Parameter|Value|
+|:-------|:-------|
+|command|rebuildindexes|
+|arg|the index id, e.g. sitecore_web_index|
+
+e.g. /sitecoredeploy.aspx?command=RebuildIndexes&arg=web
+
+#### RebuildLinkDatabases 
+
+Rebuild the link databases.  As of Sitecore v9 this is a required post installation step.
+
+By default this will build core, master and web databases.  To build a specific database use the queryString parameter
+
+|Parameter|Value|
+|:-------|:-------|
+|command|rebuildlinkdatabases|
+|arg|the database name, e.g. web, master, core|
+
+e.g. /sitecoredeploy.aspx?command=RebuildLinkDatabases&arg=master
+
+#### DeployMarketingDefinitions 
+
+TBD
+
+|Parameter|Value|
+|:-------|:-------|
+|command|deploymarketingdefinitions|
+
+e.g. /sitecoredeploy.aspx?command=deploymarketingdefinitions
+
+
 #### Calling from PowerShell
 
 <pre><code>
@@ -80,65 +141,6 @@ You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx
 
 </code></pre>
 
-
-## Available commands
-
-When a request to execute a command is made and query string parameters are turned into a Dictionary<string,string> and passed into the commands Execute method.
-This allows you pass well known paramters from your PowerShell script to the command.
-
-For example, the Publish command understands ?arg=Smart|Full
-
-Whenever you include a query string argument you **must** also include it when creating a challenge and signature with microCHAP.  The PowerShell example above does this.
-
-
-#### Publish 
-
-Publish the site.
-
-By default this will perform a smart publish.  Each language is published.
-
-|Parameter|Value|
-|:-------|:-------|
-|command|publish|
-|arg|smart, full or incremental|
-
-e.g. /sitecoredeploy.aspx?command=Publish&arg=full
-
-#### RebuildIndexes 
-
-Rebuild the sitecore search indexes.
-
-By default this rebuild all indexes.
-
-|Parameter|Value|
-|:-------|:-------|
-|command|rebuildindexes|
-|arg|the index id, e.g. sitecore_web_index|
-
-e.g. /sitecoredeploy.aspx?command=RebuildIndexes&arg=web
-
-#### RebuildLinkDatabases 
-
-Rebuild the link databases.  As of Sitecore v9 this is a required post installation step.
-
-By default this will build core, master and web databases.  To build a specific database use the queryString parameter
-
-|Parameter|Value|
-|:-------|:-------|
-|command|rebuildlinkdatabases|
-|arg|the database name, e.g. web, master, core|
-
-e.g. /sitecoredeploy.aspx?command=RebuildLinkDatabases&arg=master
-
-#### DeployMarketingDefinitions 
-
-TBD
-
-|Parameter|Value|
-|:-------|:-------|
-|command|deploymarketingdefinitions|
-
-e.g. /sitecoredeploy.aspx?command=deploymarketingdefinitions
 
 ## Adding new commands
 
