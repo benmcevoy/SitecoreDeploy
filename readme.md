@@ -79,7 +79,7 @@ You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx
     $ErrorActionPreference = 'Stop'
 
     # you need to set the path to the MicroCHAP.dll
-    Add-Type -Path "C:\inetpub\wwwroot\pv.sc\bin\MicroCHAP.dll"
+    Add-Type -Path "C:\inetpub\wwwroot\xp0.sc\bin\MicroCHAP.dll"
 
     Function SitecoreDeploy-Execute {
 	    Param(
@@ -97,8 +97,6 @@ You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx
 	    )
 
 	    # PARSE THE URL TO REQUEST
-	    $parsedConfigurations = ($Configurations) -join "^"
-
 	    $commandUrl = "{0}?command={1}&{2}" -f $SitecoreDeployUrl, $Command, $CommandArguments
 
 	    Write-Host "SitecoreDeploy-Execute: Preparing authorization for $commandUrl"
@@ -135,7 +133,7 @@ You can test the installation of SitecoreDeploy by visiting /sitecoredeploy.aspx
     }
 
     # Execute the publish command with default arguments
-    SitecoreDeploy-Execute -SitecoreDeployUrl "https://parks.local/sitecoredeploy.aspx" -SharedSecret "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" -Command "publish"
+    SitecoreDeploy-Execute -SitecoreDeployUrl "https://xp0.sc/sitecoredeploy.aspx" -SharedSecret "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" -Command "publish"
 
 </code></pre>
 
