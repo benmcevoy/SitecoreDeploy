@@ -11,6 +11,11 @@ It is intended that you use this utility via PowerShell commands during your dep
 
 ## Available commands
 
+[Publish](#publish)<br>
+[RebuildIndexes](#rebuildindexes) <br>
+[RebuildLinkDatabases](#rebuildlinkdatabases) <br>
+[DeployMarketingDefinitions](#deploymarketingdefinitions)<br>
+
 When a request to execute a command is made the query string parameters are turned into a Dictionary<string,string> and passed into the commands Execute method.
 This allows you pass well known parameters from your PowerShell script to the command.
 
