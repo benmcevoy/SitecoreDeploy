@@ -1,6 +1,6 @@
 ﻿# SitecoreDeploy - A utility to execute commands against a sitecore instance 
 
-This utility expects **Sitecore v9** or greater and **MicroCHAP v1.2.2** or greater.
+This utility expects **Sitecore v9** or greater and **MicroCHAP v1.2.2.2** or greater.
 
 A utility to execute commands during deployment, such as Publish, Rebuild indexes and so on.
 
