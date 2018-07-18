@@ -39,6 +39,4 @@ namespace SitecoreDeploy
 
         public List<SitecoreDeployCommand> Commands { get; set; } = new List<SitecoreDeployCommand>();
     }
-
-    
 }

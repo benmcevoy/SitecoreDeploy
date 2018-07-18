@@ -28,7 +28,7 @@ namespace SitecoreDeploy.Commands
 
             DeployAll().Wait();
 
-            args.Result = $"SitecoreDeploy: DeployMarketingDefinitions completed";
+            args.Result = "SitecoreDeploy: DeployMarketingDefinitions completed";
 
             return args;
         }

@@ -28,12 +28,13 @@ namespace SitecoreDeploy.Commands
             {
                 case "smart":
                     {
-
+                        PublishingLog.Info("DeployService.PublishService Started Smart Publish");
                         PublishManager.PublishSmart(master, targets, languages);
                         JobsCount.TasksPublishings.Increment();
                         args.Result = "SitecoreDeploy: Started Smart Publish";
                         break;
                     }
+
                 case "full":
                     {
                         PublishingLog.Info("DeployService.PublishService Started Full Publish");
@@ -47,6 +48,7 @@ namespace SitecoreDeploy.Commands
 
                         break;
                     }
+
                 case "incremental":
                     {
                         PublishingLog.Info("DeployService.PublishService Started Incremental Publish");
@@ -55,6 +57,7 @@ namespace SitecoreDeploy.Commands
                         args.Result = "SitecoreDeploy: Started Incremental Publish";
                         break;
                     }
+
                 default: throw new ArgumentException($"unknown mode '{mode}'");
             }
 
